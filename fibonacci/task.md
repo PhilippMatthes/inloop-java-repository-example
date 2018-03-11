@@ -34,8 +34,6 @@ illegal argument values of `x` must be handled by throwing an appropriate except
 
 ## Test Markdown Tables
 
-|   |   |   |   |   |
+|  A |  B |  C | D  | E  |
 |---|---|---|---|---|
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
+| Test 1  |  Test 2 | Test  3 | Test 4 |  Test 5|
