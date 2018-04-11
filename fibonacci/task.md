@@ -5,8 +5,10 @@ From [Wikipedia][wiki]:
 > In mathematics, the Fibonacci numbers are the numbers in the following integer sequence, called
 > the Fibonacci sequence, and characterized by the fact that every number after the first two is
 > the sum of the two preceding ones:
->
-> 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ...
+
+|n|| 1 |  2 | 3 | 4 | 5 | 6 | ... |
+|---|---|---|---|---|---|---|---|---|
+|fib(n)|| 1 | 1 | 2 | 3 | 5 | 8 | ... |
 
 [wiki]: https://en.wikipedia.org/wiki/Fibonacci_number
 
@@ -33,7 +35,3 @@ illegal argument values of `x` must be handled by throwing an appropriate except
 - [Fibonacci.java template](attachments/Fibonacci.java)
 
 ## Test Markdown Tables
-
-|  A |  B |  C | D  | E  |
-|---|---|---|---|---|
-| Test 1  |  Test 2 | Test  3 | Test 4 |  Test 5|
