@@ -37,6 +37,9 @@
     </junit>
   </target>
 
+  <taskdef resource="com/puppycrawl/tools/checkstyle/ant/checkstyle-ant-task.properties"
+           classpath="lib/checkstyle-8.9-all.jar"/>
+
   <target name="checkstyle">
     <checkstyle config="lib/sun_checks.xml">
       <fileset dir="${current_task}/solution" includes="**/*.java"/>
