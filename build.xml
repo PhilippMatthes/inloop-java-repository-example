@@ -41,7 +41,7 @@
            classpath="lib/checkstyle-8.9-all.jar"/>
 
   <target name="checkstyle">
-    <checkstyle config="lib/sun_checks.xml">
+    <checkstyle config="lib/sun_checks.xml" failOnViolation="false">
       <fileset dir="${checker.input}" includes="**/*.java"/>
       <formatter type="plain"/>
       <formatter type="xml" toFile="${checker.output}/checkstyle_errors.xml"/>
