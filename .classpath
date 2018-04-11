@@ -5,5 +5,7 @@
 	<classpathentry kind="src" path="fibonacci/solution"/>
 	<classpathentry kind="lib" path="lib/hamcrest-core-1.3.jar"/>
 	<classpathentry kind="lib" path="lib/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="lib/checkstyle-8.9-all.jar"/>
+	<classpathentry kind="lib" path="lib/sun_checks.xml"/>
 	<classpathentry kind="output" path="build"/>
 </classpath>
