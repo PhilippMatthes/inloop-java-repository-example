@@ -1,5 +1,11 @@
 <project name="INLOOP example checker" default="fail" basedir=".">
 
+  <taskdef name="pmd" classname="net.sourceforge.pmd.ant.PMDTask"/>
+  <taskdef resource="edu/umd/cs/findbugs/anttask/tasks.properties"
+           classpath="lib/spotbugs-3.1.1/lib/spotbugs-ant.jar"/>
+  <taskdef resource="com/puppycrawl/tools/checkstyle/ant/checkstyle-ant-task.properties"
+           classpath="lib/checkstyle-8.9-all.jar"/>
+
   <path id="lib.thirdparty">
     <fileset dir="lib">
       <include name="*.jar"/>
@@ -24,16 +30,12 @@
   </target>
 
   <target name="spotbugs">
-    <taskdef resource="edu/umd/cs/findbugs/anttask/tasks.properties"
-             classpath="lib/spotbugs-3.1.1/lib/spotbugs-ant.jar"/>
     <spotbugs home="${spotbugs.home}" output="xml" outputFile="${checker.output}/spotbugs_errors.xml">
       <sourcePath path="${checker.input}"/>
     </spotbugs>
   </target>
 
   <target name="checkstyle">
-    <taskdef resource="com/puppycrawl/tools/checkstyle/ant/checkstyle-ant-task.properties"
-             classpath="lib/checkstyle-8.9-all.jar"/>
     <checkstyle config="lib/checkstyle.xml" failOnViolation="false">
       <fileset dir="${checker.input}" includes="**/*.java"/>
       <formatter type="xml" toFile="${checker.output}/checkstyle_errors.xml"/>
@@ -41,7 +43,6 @@
   </target>
 
   <target name="pmd">
-    <taskdef name="pmd" classname="net.sourceforge.pmd.ant.PMDTask"/>
     <pmd shortFilenames="true">
       <ruleset>lib/pmd-ruleset.xml</ruleset>
       <formatter type="xml" toFile="${checker.output}/pmd_errors.xml"/>
