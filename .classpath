@@ -8,6 +8,5 @@
 	<classpathentry kind="lib" path="lib/checkstyle-8.9-all.jar"/>
 	<classpathentry kind="lib" path="lib/pmd_ruleset.xml"/>
 	<classpathentry kind="lib" path="lib/checkstyle.xml"/>
-	<classpathentry kind="lib" path="lib/pmd_ruleset.xml"/>
 	<classpathentry kind="output" path="build"/>
 </classpath>
