@@ -1,6 +1,7 @@
 <project name="INLOOP example checker" default="fail" basedir=".">
 
-  <taskdef name="pmd" classname="net.sourceforge.pmd.ant.PMDTask"/>
+  <taskdef name="pmd"
+           classname="lib/pmd-bin-6.2.0/lib/pmd-java-6.2.0.jar"/>
   <taskdef resource="edu/umd/cs/findbugs/anttask/tasks.properties"
            classpath="lib/spotbugs-3.1.1/lib/spotbugs-ant.jar"/>
   <taskdef resource="com/puppycrawl/tools/checkstyle/ant/checkstyle-ant-task.properties"
