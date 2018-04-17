@@ -3,7 +3,7 @@
   <property name="build.dir" value="/checker/scratch/build"/>
   <property name="checker.input" value="/checker/input"/>
   <property name="checker.output" value="/checker/output/storage"/>
-  <property name="spotbugs.home" value="/export/home/daveho/work/spotbugs"/>
+  <property name="spotbugs.home" value="lib/spotbugs-3.1.1"/>
 
   <path id="lib.pmd">
     <fileset dir="lib/pmd-bin-6.2.0/lib">
