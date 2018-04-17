@@ -8,5 +8,7 @@
 	<classpathentry kind="lib" path="lib/checkstyle-8.9-all.jar"/>
 	<classpathentry kind="lib" path="lib/pmd_ruleset.xml"/>
 	<classpathentry kind="lib" path="lib/checkstyle.xml"/>
+	<classpathentry kind="lib" path="lib/pmd-bin-6.2.0/lib/pmd-java-6.2.0.jar"/>
+	<classpathentry kind="lib" path="lib/spotbugs-3.1.1/lib/spotbugs-ant.jar"/>
 	<classpathentry kind="output" path="build"/>
 </classpath>
