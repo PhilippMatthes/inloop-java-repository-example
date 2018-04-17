@@ -39,8 +39,7 @@
 
   <target name="spotbugs">
     <spotbugs home="${spotbugs.home}" output="xml"
-              outputFile="${checker.output}/spotbugs_errors.xml"
-              jvmargs="--add-modules=ALL-SYSTEM">
+              outputFile="${checker.output}/spotbugs_errors.xml">
       <fileset dir="${checker.input}" includes="**/*.java"/>
       <sourcePath path="${checker.input}"/>
     </spotbugs>
@@ -54,7 +53,7 @@
   </target>
 
   <target name="pmd">
-    <pmd shortFilenames="true" cacheLocation="{build.dir}/pmd.cache">
+    <pmd shortFilenames="true">
       <ruleset>lib/pmd-ruleset.xml</ruleset>
       <formatter type="xml" toFile="${checker.output}/pmd_errors.xml"/>
       <fileset dir="${checker.input}" includes="**/*.java"/>
