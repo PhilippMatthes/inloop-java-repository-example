@@ -54,7 +54,7 @@
   </target>
 
   <target name="pmd">
-    <pmd shortFilenames="true">
+    <pmd shortFilenames="true" cacheLocation="{build.dir}/pmd.cache">
       <ruleset>lib/pmd-ruleset.xml</ruleset>
       <formatter type="xml" toFile="${checker.output}/pmd_errors.xml"/>
       <fileset dir="${checker.input}" includes="**/*.java"/>
