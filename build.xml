@@ -39,6 +39,7 @@
 
   <target name="spotbugs">
     <spotbugs home="${spotbugs.home}" output="xml" outputFile="${checker.output}/spotbugs_errors.xml">
+      <fileset dir="${checker.input}" includes="**/*.java"/>
       <sourcePath path="${checker.input}"/>
     </spotbugs>
   </target>
