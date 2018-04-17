@@ -1,10 +1,15 @@
 <project name="INLOOP example checker" default="fail" basedir=".">
 
-  <taskdef name="pmd" classname="net.sourceforge.pmd.ant.PMDTask" classpathref="lib/pmd-bin-6.2.0/lib"/>
-  <taskdef resource="edu/umd/cs/findbugs/anttask/tasks.properties"
-           classpath="lib/spotbugs-3.1.1/lib/spotbugs-ant.jar"/>
-  <taskdef resource="com/puppycrawl/tools/checkstyle/ant/checkstyle-ant-task.properties"
-           classpath="lib/checkstyle-8.9-all.jar"/>
+  <property name="build.dir" value="/checker/scratch/build"/>
+  <property name="checker.input" value="/checker/input"/>
+  <property name="checker.output" value="/checker/output/storage"/>
+  <property name="spotbugs.home" value="/export/home/daveho/work/spotbugs"/>
+
+  <path id="lib.pmd">
+    <fileset dir="lib/pmd-bin-6.2.0/lib">
+        <include name="*.jar"/>
+    </fileset>
+  </path>
 
   <path id="lib.thirdparty">
     <fileset dir="lib">
@@ -12,10 +17,13 @@
     </fileset>
   </path>
 
-  <property name="build.dir" value="/checker/scratch/build"/>
-  <property name="checker.input" value="/checker/input"/>
-  <property name="checker.output" value="/checker/output/storage"/>
-  <property name="spotbugs.home" value="/export/home/daveho/work/spotbugs"/>
+  <taskdef name="pmd"
+           classname="net.sourceforge.pmd.ant.PMDTask"
+           classpathref="lib.pmd"/>
+  <taskdef resource="edu/umd/cs/findbugs/anttask/tasks.properties"
+           classpath="lib/spotbugs-3.1.1/lib/spotbugs-ant.jar"/>
+  <taskdef resource="com/puppycrawl/tools/checkstyle/ant/checkstyle-ant-task.properties"
+           classpath="lib/checkstyle-8.9-all.jar"/>
 
 
   <target name="compile">
