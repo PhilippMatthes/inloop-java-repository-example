@@ -49,7 +49,7 @@
     </pmd>
   </target>
 
-  <target name="test" depends="compile, checkstyle, pmd, spotbugs">
+  <target name="test" depends="compile, checkstyle, pmd">
     <junit fork="true" forkmode="once" haltonfailure="true"
            printsummary="true" tempdir="${build.dir}">
       <classpath>
