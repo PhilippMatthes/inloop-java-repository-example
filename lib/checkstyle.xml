@@ -83,7 +83,7 @@
         </module>
         <module name="InnerAssignment"/>
         <module name="MagicNumber">
-            <property name="id" value="MagicNumber">
+            <property name="id" value="MagicNumber"/>
         </module>
         <module name="MissingSwitchDefault"/>
         <module name="ModifiedControlVariable"/>
