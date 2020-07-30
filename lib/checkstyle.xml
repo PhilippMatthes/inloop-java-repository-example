@@ -95,7 +95,7 @@
         <module name="NestedTryDepth"/>
         <module name="OneStatementPerLine"/>
         <module name="OverloadMethodsDeclarationOrder"/>
-        <module name="PackageDeclaration"/>
+        <!-- Note: Package declaration was removed -->
         <module name="ParameterAssignment"/>
         <module name="SimplifyBooleanExpression"/>
         <module name="SimplifyBooleanReturn"/>
