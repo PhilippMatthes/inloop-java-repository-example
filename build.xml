@@ -16,9 +16,11 @@
     </fileset>
   </path>
 
+  <!--
   <taskdef name="pmd"
            classname="net.sourceforge.pmd.ant.PMDTask"
            classpathref="lib.pmd"/>
+  -->
   <taskdef resource="com/puppycrawl/tools/checkstyle/ant/checkstyle-ant-task.properties"
            classpath="lib/checkstyle-7.6.1-all.jar"/>
 
@@ -41,6 +43,7 @@
     </checkstyle>
   </target>
 
+  <!--
   <target name="pmd">
     <pmd shortFilenames="true">
       <ruleset>lib/pmd-ruleset.xml</ruleset>
@@ -48,8 +51,9 @@
       <fileset dir="${checker.input}" includes="**/*.java"/>
     </pmd>
   </target>
+  -->
 
-  <target name="test" depends="compile, checkstyle, pmd">
+  <target name="test" depends="compile, checkstyle">
     <junit fork="true" forkmode="once" haltonfailure="true"
            printsummary="true" tempdir="${build.dir}">
       <classpath>
